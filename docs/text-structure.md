@@ -68,24 +68,26 @@ Unlike standard Markdown tables, Markdoc tables support rich content inside cell
 * Available in standard Markdown tables?
 ---
 * Code snippet
-* Even Markdoc tags! {% code-group %}
-```js {% title="JavaScript" %}
+*
+```javascript
   fetch('https://api.forte.net/v3/transactions', {
     method: 'POST',
     headers: { 'Authorization': 'Bearer YOUR_API_KEY' }
   });
 ```
-  {% /code-group %}
 * No
 ---
 * Admonition
-* {% admonition type="warning" name="Important" %}
+*
+  {% admonition type="warning" name="Important" %}
   Always use sandbox credentials when testing. Never use live API keys in development.
   {% /admonition %}
 * No
 ---
 * List
-* Supported payment methods:
+*
+  Supported payment methods:
+
   - Credit card
   - Debit card
   - ACH / Bank transfer
