@@ -72,12 +72,12 @@ Unlike standard Markdown tables, Markdoc tables support rich content inside cell
 
 * Code snippet
 * A code block renders directly inside the cell:
-```javascript
+  ```javascript
   fetch('https://api.forte.net/v3/transactions', {
     method: 'POST',
     headers: { 'Authorization': 'Bearer YOUR_API_KEY' }
   });
-```
+  ```
 * No
 
 ---
