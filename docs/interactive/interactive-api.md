@@ -67,22 +67,18 @@ Key endpoints:
 ## OpenAPI Code Sample
 
 {% openapi-code-sample
-  descriptionFile="../openapi/museum.yaml"
-  path="/tickets"
-  method="post"
+  descriptionFile="../../openapi/museum.yaml"
+  operationId="buyMuseumTickets"
   lang="curl" /%}
 
 ## OpenAPI Response Sample
 
 {% openapi-response-sample
-  descriptionFile="../openapi/museum.yaml"
-  path="/tickets"
-  method="post" /%}
+  descriptionFile="../../openapi/museum.yaml"
+  operationId="buyMuseumTickets" /%}
 
 ## Replay OpenAPI
 
 {% replay-openapi
-  descriptionFile="../openapi/museum.yaml"
-  path="/museum-hours"
-  method="get" /%}
-   
+  descriptionFile="../../openapi/museum.yaml"
+  operationId="getMuseumHours" /%}

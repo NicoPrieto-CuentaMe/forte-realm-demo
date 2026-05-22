@@ -1,4 +1,4 @@
- ---
+---
 title: Content Reuse
 description: Partials, Markdoc examples, and conditional content in Redocly Realm
 ---
@@ -11,7 +11,7 @@ This page demonstrates how Redocly Realm allows you to reuse content across mult
 
 The Markdoc example tag shows the syntax and the rendered output side by side.
 
-{% markdoc-example %}
+{% markdoc-example renderDemo=true %}
 ```markdown
 {% admonition type="warning" name="Important" %}
 This is an important message about this product.
@@ -21,15 +21,15 @@ This is an important message about this product.
 
 ## Conditional Content with If/Else
 
-The following content uses conditional logic to show different messages:
+The following content uses conditional logic to show different messages based on user access:
 
-{% if true %}
-{% admonition type="success" name="Condition met" %}
-This content is visible because the condition is true.
+{% if $rbac.teams %}
+{% admonition type="success" name="Authenticated user" %}
+You are logged in. You have full access to this documentation.
 {% /admonition %}
 {% else %}
-{% admonition type="danger" name="Condition not met" %}
-This content would show if the condition were false.
+{% admonition type="info" name="Guest user" %}
+You are viewing this page as a guest. Log in to access additional content.
 {% /admonition %}
 {% /if %}
 
@@ -45,4 +45,3 @@ The following is an example of how a partial is used:
 In a real project, the file `_partials/shared-note.md` would contain
 reusable content that appears on multiple pages — for example, a standard
 disclaimer, a shared warning, or a repeated code example.
-

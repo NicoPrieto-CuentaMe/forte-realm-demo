@@ -1,4 +1,4 @@
- ---
+---
 title: Code & Technical
 description: Code snippets, code groups, file trees, and diagrams in Redocly Realm
 ---
@@ -41,21 +41,21 @@ function processPayment(amount, cardNumber) {
 ## Code Group — Multiple Languages
 
 {% code-group %}
-{% code title="JavaScript" lang="javascript" %}
+```js {% title="JavaScript" %}
 fetch('https://api.forte.net/v3/transactions')
   .then(response => response.json())
   .then(data => console.log(data));
-{% /code %}
-{% code title="Python" lang="python" %}
+```
+```python {% title="Python" %}
 import requests
 response = requests.get('https://api.forte.net/v3/transactions')
 data = response.json()
 print(data)
-{% /code %}
-{% code title="curl" lang="bash" %}
+```
+```bash {% title="curl" %}
 curl -X GET https://api.forte.net/v3/transactions \
   -H "Authorization: Bearer YOUR_API_KEY"
-{% /code %}
+```
 {% /code-group %}
 
 ## File Tree
@@ -93,18 +93,32 @@ graph TD
 
 ## Code Walkthrough
 
-{% code-walkthrough %}
-{% step title="Set up the request" %}
-Start by defining the API endpoint and your authentication headers.
-{% /step %}
-{% step title="Build the payload" %}
-Create the transaction payload with the required fields: amount and card number.
-{% /step %}
-{% step title="Send the request" %}
-Use fetch or your preferred HTTP client to send the POST request to the Forte API.
-{% /step %}
-{% step title="Handle the response" %}
-Check the response status and handle both success and error cases accordingly.
-{% /step %}
-{% /code-walkthrough %}
+{% code-walkthrough
+  filesets=[
+    {
+      "files": ["./_filesets/transaction.js"]
+    }
+  ]
+%}
 
+## How to integrate the Forte API
+
+Follow these steps to make your first API call to Forte.
+
+{% step id="setup" heading="Set up credentials" %}
+Start by defining your API key and base URL. Store these as constants at the top of your file. Never hardcode your API key in production — use environment variables instead.
+{% /step %}
+
+{% step id="payload" heading="Build the payload" %}
+Create the transaction payload with the required fields: amount, card number, expiration date, CVV, and currency. All amounts are in USD by default.
+{% /step %}
+
+{% step id="request" heading="Send the request" %}
+Use the fetch function to send a POST request to the transactions endpoint. Pass your headers and the JSON-encoded payload in the request body.
+{% /step %}
+
+{% step id="response" heading="Handle the response" %}
+Check the response status. A successful transaction returns a transaction ID. If the request fails, the response includes an error message explaining what went wrong.
+{% /step %}
+
+{% /code-walkthrough %}

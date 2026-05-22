@@ -10,4 +10,7 @@ navbar:
       page: docs/text-structure.md
 
 seo:
-  title: Forte Realm Demo 
+  title: Forte Realm Demo
+
+ignore:
+  - '**/_filesets/**/*'

@@ -41,7 +41,7 @@ This page demonstrates the basic text formatting and structure elements availabl
 
 ## Links
 
-[Internal link to Code & Technical](../code/code-technical.md)
+[Internal link to Code & Technical](code/code-technical.md)
 
 [External link to Redocly](https://redocly.com)
 
