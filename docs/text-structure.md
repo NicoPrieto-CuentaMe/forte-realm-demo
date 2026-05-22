@@ -71,8 +71,7 @@ Unlike standard Markdown tables, Markdoc tables support rich content inside cell
 ---
 
 * Code snippet
-* **REQUIRED.**
-  Use code blocks directly inside cells:
+* A code block renders directly inside the cell:
 ```javascript
   fetch('https://api.forte.net/v3/transactions', {
     method: 'POST',
