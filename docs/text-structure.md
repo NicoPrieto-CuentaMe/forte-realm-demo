@@ -1,4 +1,4 @@
- ---
+---
 title: Text & Structure
 description: Basic text formatting and structure elements in Redocly Realm
 ---
@@ -60,26 +60,40 @@ This page demonstrates the basic text formatting and structure elements availabl
 
 ## Markdoc Table
 
-The Markdoc table tag allows rich content inside cells — lists, code, and other tags — which standard Markdown tables do not support.
+Unlike standard Markdown tables, Markdoc tables support rich content inside cells — including code, admonitions, and lists.
 
 {% table %}
-- Feature
-- Description
-- Available in WordPress?
+- Content Type
+- Example inside a cell
+- Available in standard Markdown tables?
 ---
-- Code snippets in cells
-- Embed syntax-highlighted code directly inside a table cell
+- Code snippet
+-
+```javascript
+  fetch('https://api.forte.net/v3/transactions', {
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer YOUR_API_KEY' }
+  });
+```
 - No
 ---
-- Admonitions in cells
-- Add warning or info boxes inside table cells
+- Admonition
+-
+  {% admonition type="warning" name="Important" %}
+  Always use sandbox credentials when testing. Never use live API keys in development.
+  {% /admonition %}
 - No
 ---
-- Lists in cells
-- Nest bullet lists inside table cells without breaking layout
+- List
+-
+  Supported payment methods:
+  - Credit card
+  - Debit card
+  - ACH / Bank transfer
+  - Digital wallets
 - Partial
 ---
-- Interactive components
-- Tabs, cards, and other dynamic elements inside tables
-- No
+- Plain text
+- Standard text content works the same as in regular Markdown tables.
+- Yes
 {% /table %}
