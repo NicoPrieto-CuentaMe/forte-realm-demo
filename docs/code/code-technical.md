@@ -22,10 +22,6 @@ function createTransaction(amount, cardNumber) {
 }
 ```
 
-## Code Snippet with Title and Highlighted Lines
-
-*Coming soon*
-
 ## Code Group — Multiple Languages
 
 {% code-group %}
@@ -78,35 +74,3 @@ graph TD
     D --> G[Transaction Details]
     E --> H[Transaction Deleted]
 ```
-
-## Code Walkthrough
-
-{% code-walkthrough
-  filesets=[
-    {
-      "files": ["./_filesets/transaction.js"]
-    }
-  ]
-%}
-
-## How to integrate the Forte API
-
-Follow these steps to make your first API call to Forte.
-
-{% step id="setup" heading="Set up credentials" %}
-Start by defining your API key and base URL. Store these as constants at the top of your file. Never hardcode your API key in production — use environment variables instead.
-{% /step %}
-
-{% step id="payload" heading="Build the payload" %}
-Create the transaction payload with the required fields: amount, card number, expiration date, CVV, and currency. All amounts are in USD by default.
-{% /step %}
-
-{% step id="request" heading="Send the request" %}
-Use the fetch function to send a POST request to the transactions endpoint. Pass your headers and the JSON-encoded payload in the request body.
-{% /step %}
-
-{% step id="response" heading="Handle the response" %}
-Check the response status. A successful transaction returns a transaction ID. If the request fails, the response includes an error message explaining what went wrong.
-{% /step %}
-
-{% /code-walkthrough %}
