@@ -11,10 +11,12 @@ This page demonstrates how Redocly Realm allows you to reuse content across mult
 
 The Markdoc example tag shows the syntax and the rendered output side by side.
 
-{% markdoc-example %}
+{% markdoc-example renderDemo=true %}
+```markdown {% title="example.md" %}
 {% admonition type="warning" name="Important" %}
 This is an important message about this product.
 {% /admonition %}
+```
 {% /markdoc-example %}
 
 ## Conditional Content with If/Else
@@ -34,12 +36,6 @@ You are viewing this page as a guest. Log in to access additional content.
 ## Partial
 
 Partials allow you to write content once and reuse it across multiple pages.
-The following is an example of how a partial is used:
+The following partial is loaded from `/_partials/shared-note.md`:
 
-```markdoc
 {% partial file="/_partials/shared-note.md" /%}
-```
-
-In a real project, the file `_partials/shared-note.md` would contain
-reusable content that appears on multiple pages — for example, a standard
-disclaimer, a shared warning, or a repeated code example.
