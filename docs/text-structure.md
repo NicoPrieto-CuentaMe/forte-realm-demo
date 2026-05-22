@@ -63,37 +63,36 @@ This page demonstrates the basic text formatting and structure elements availabl
 Unlike standard Markdown tables, Markdoc tables support rich content inside cells — including code, admonitions, and lists.
 
 {% table %}
-- Content Type
-- Example inside a cell
-- Available in standard Markdown tables?
+* Content Type
+* Example inside a cell
+* Available in standard Markdown tables?
 ---
-- Code snippet
--
-```javascript
+* Code snippet
+* Even Markdoc tags! {% code-group %}
+```js {% title="JavaScript" %}
   fetch('https://api.forte.net/v3/transactions', {
     method: 'POST',
     headers: { 'Authorization': 'Bearer YOUR_API_KEY' }
   });
 ```
-- No
+  {% /code-group %}
+* No
 ---
-- Admonition
--
-  {% admonition type="warning" name="Important" %}
+* Admonition
+* {% admonition type="warning" name="Important" %}
   Always use sandbox credentials when testing. Never use live API keys in development.
   {% /admonition %}
-- No
+* No
 ---
-- List
--
-  Supported payment methods:
+* List
+* Supported payment methods:
   - Credit card
   - Debit card
   - ACH / Bank transfer
   - Digital wallets
-- Partial
+* Partial
 ---
-- Plain text
-- Standard text content works the same as in regular Markdown tables.
-- Yes
+* Plain text
+* Standard text content works the same as in regular Markdown tables.
+* Yes
 {% /table %}
