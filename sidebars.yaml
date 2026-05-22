@@ -1,1 +1,14 @@
- 
+- page: index.md
+  label: Home
+- group: Documentation
+  items:
+    - page: docs/text-structure.md
+      label: Text & Structure
+    - page: docs/code/code-technical.md
+      label: Code & Technical
+    - page: docs/visual/visual-components.md
+      label: Visual Components
+    - page: docs/interactive/interactive-api.md
+      label: Interactive & API
+    - page: docs/reuse/content-reuse.md
+      label: Content Reuse
