@@ -11,12 +11,10 @@ This page demonstrates how Redocly Realm allows you to reuse content across mult
 
 The Markdoc example tag shows the syntax and the rendered output side by side.
 
-{% markdoc-example renderDemo=true %}
-```markdown
+{% markdoc-example %}
 {% admonition type="warning" name="Important" %}
 This is an important message about this product.
 {% /admonition %}
-```
 {% /markdoc-example %}
 
 ## Conditional Content with If/Else
@@ -27,7 +25,7 @@ The following content uses conditional logic to show different messages based on
 {% admonition type="success" name="Authenticated user" %}
 You are logged in. You have full access to this documentation.
 {% /admonition %}
-{% else %}
+{% else /%}
 {% admonition type="info" name="Guest user" %}
 You are viewing this page as a guest. Log in to access additional content.
 {% /admonition %}

@@ -1,4 +1,4 @@
- ---
+---
 title: Visual Components
 description: Cards, admonitions, images, and icons in Redocly Realm
 ---
@@ -41,9 +41,7 @@ Learn how to reuse content across multiple pages with partials.
 
 ## Image with Lightbox
 
-{% img src="https://redocly.com/assets/redocly-card.f670aae34a39545a5ea633a540cb3a4a333a1f23bb2ed3c4a1b17a5fbcf0ac85.db81178d.png" alt="Redocly Demo" withLightbox=true %}
-Click the image to open it in full size.
-{% /img %}
+{% img src="https://redocly.com/assets/redocly-card.f670aae34a39545a5ea633a540cb3a4a333a1f23bb2ed3c4a1b17a5fbcf0ac85.db81178d.png" alt="Redocly Demo" withLightbox=true /%}
 
 ## Icons
 
