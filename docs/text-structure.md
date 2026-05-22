@@ -58,3 +58,28 @@ This page demonstrates the basic text formatting and structure elements availabl
 
 ![Redocly Logo](https://redocly.com/assets/redocly-white-logo.176e3e2d646a542bdc2590ae497b3b8ee3825605652af49b8790ab9e7a26335d.9c1bb791.svg)
 
+## Markdoc Table
+
+The Markdoc table tag allows rich content inside cells — lists, code, and other tags — which standard Markdown tables do not support.
+
+{% table %}
+- Feature
+- Description
+- Available in WordPress?
+---
+- Code snippets in cells
+- Embed syntax-highlighted code directly inside a table cell
+- No
+---
+- Admonitions in cells
+- Add warning or info boxes inside table cells
+- No
+---
+- Lists in cells
+- Nest bullet lists inside table cells without breaking layout
+- Partial
+---
+- Interactive components
+- Tabs, cards, and other dynamic elements inside tables
+- No
+{% /table %}
