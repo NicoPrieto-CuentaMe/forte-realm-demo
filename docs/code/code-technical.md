@@ -24,19 +24,7 @@ function createTransaction(amount, cardNumber) {
 
 ## Code Snippet with Title and Highlighted Lines
 
-```javascript {% title="transaction.js" highlight="{3,4}" %}
-function processPayment(amount, cardNumber) {
-  const payload = {
-    amount: amount,
-    card_number: cardNumber,
-    currency: 'USD'
-  };
-  return fetch('https://api.forte.net/v3/transactions', {
-    method: 'POST',
-    body: JSON.stringify(payload)
-  });
-}
-```
+*Coming soon*
 
 ## Code Group — Multiple Languages
 
