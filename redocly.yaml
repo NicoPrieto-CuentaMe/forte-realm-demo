@@ -1,0 +1,13 @@
+apis:
+  museum@default:
+    root: openapi/museum.yaml
+
+navbar:
+  items:
+    - label: Home
+      page: index.md
+    - label: Documentation
+      page: docs/text-structure.md
+
+seo:
+  title: Forte Realm Demo 
