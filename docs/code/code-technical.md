@@ -5,7 +5,7 @@ description: Code snippets, code groups, file trees, and diagrams in Redocly Rea
 
 # Code & Technical
 
-This page demonstrates the code and technical content types available in Redocly Realm.
+This page demonstrates the code and technical content types available in Redocly Realm. TEST
 
 ## Basic Code Snippet
 
